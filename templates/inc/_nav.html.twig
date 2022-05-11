@@ -131,7 +131,7 @@
         <div class="row">
           <div class="span4">
             <div class="logo">
-              <a href="home"><img src="assets/img/logo.png" alt="" class="logo" /></a>
+              <a href="{{ path('app_home') }}"><img src="assets/img/logo.png" alt="" class="logo" /></a>
               
             </div>
           </div>
@@ -141,11 +141,8 @@
                 <nav>
                   <ul class="nav topnav">
                     <li class="dropdown active">
-                      <a href="home">Accueil <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-alt2.html">Homepage 2</a></li>
-                        <li><a href="index-alt3.html">Homepage 3</a></li>
-                      </ul>
+                      <a href="{{ path('app_home') }}">Accueil <i class="icon-angle-down"></i></a>
+                      
                     </li>
                     <li class="dropdown">
                       <a href="#">Nos projets <i class="icon-angle-down"></i></a>
