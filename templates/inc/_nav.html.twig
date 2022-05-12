@@ -26,8 +26,8 @@
           <div class="span12">
             <div class="headnav">
               <ul>
-                <li><a href="{{ path('app_login') }}" data-toggle="modal"><i class="icon-user"></i> S'enregistrer</a></li>
-                <li><a href="#mySignin" data-toggle="modal">Se connecter</a></li>
+                <li><a href="{{ path('app_register') }}" data-toggle="modal"><i class="icon-user"></i> S'enregistrer</a></li>
+                <li><a href="{{ path('app_login') }}" data-toggle="modal">Se connecter</a></li>
               </ul>
             </div>
             <!-- Signup Modal -->
@@ -147,27 +147,27 @@
                     <li class="dropdown">
                       <a href="#">Nos projets <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="table.html">Table</a></li>
-                        <li><a href="components.html">Components</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">Table</a></li>
+                        <li><a href="#">Components</a></li>
                         
                       </ul>
                     </li>
                     <li class="dropdown">
                       <a href="#">Notre association <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="pricingbox.html">Pricing boxes</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Pricing boxes</a></li>
+                        <li><a href="#">Testimonials</a></li>
                         
                       </ul>
                     </li>
                     <li class="dropdown">
                       <a href="#">Discution <i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
-                        <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
-                        <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
+                        <li><a href="#">Portfolio 2 columns</a></li>
+                        <li><a href="#">Portfolio 3 columns</a></li>
+                        <li><a href="#">Portfolio 4 columns</a></li>
                         
                       </ul>
                     </li>
@@ -248,7 +248,7 @@
                 <h4>Agir ensemble pour le <span class="highlight"><strong>Développement Durable</strong></span> </h4>
               </div>
               <div class="cta floatright">
-                <a class="btn btn-large btn-theme btn-rounded" href="#">expression des besoins</a>
+                <a class="btn btn-large btn-theme btn-rounded" href="{{ path('app_contact') }}">expression des besoins</a>
               </div>
             </div>
           </div>
