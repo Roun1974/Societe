@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de contact{% endblock %}
+
+{% block body %}
+ <section id="content">
+ <div class="container">
+        <div class="row">
+          <div class="span12">
+          <h5><span class="highlight"><strong>Contactez - nous !</strong></span> </h5>
+{{ form_start(form) }}
+<div class="row">
+  <div class="span4 form-group">
+    {{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}
+
+</div>
+</div>
+<div class="form-group">
+    {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+
+</div>
+<div class="form-group">
+    {{ form_row(form.message, {'attr': {'class': 'form-control'}}) }}
+
+</div>
+
+<div class="form-group">
+    <input type="submit" value="Envoyer message" class="btn btn-large btn-theme margintop10">
+</div>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+</section>
+{% endblock %}
