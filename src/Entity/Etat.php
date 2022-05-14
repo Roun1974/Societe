@@ -21,9 +21,13 @@ class Etat
     #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Etat::class)]
     private $etats;
 
+    #[ORM\OneToMany(mappedBy: 'etat', targetEntity: Projet::class)]
+    private $projets;
+
     public function __construct()
     {
         $this->etats = new ArrayCollection();
+        $this->projets = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -67,6 +71,36 @@ class Etat
             // set the owning side to null (unless already changed)
             if ($etat->getProjet() === $this) {
                 $etat->setProjet(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Projet>
+     */
+    public function getProjets(): Collection
+    {
+        return $this->projets;
+    }
+
+    public function addProjet(Projet $projet): self
+    {
+        if (!$this->projets->contains($projet)) {
+            $this->projets[] = $projet;
+            $projet->setEtat($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProjet(Projet $projet): self
+    {
+        if ($this->projets->removeElement($projet)) {
+            // set the owning side to null (unless already changed)
+            if ($projet->getEtat() === $this) {
+                $projet->setEtat(null);
             }
         }
 
