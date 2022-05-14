@@ -27,9 +27,13 @@ class Projet
     #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Commentaire::class)]
     private $commentaires;
 
+    #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Image::class)]
+    private $images;
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
+        $this->images = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -97,6 +101,36 @@ class Projet
             // set the owning side to null (unless already changed)
             if ($commentaire->getProjet() === $this) {
                 $commentaire->setProjet(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Image>
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setProjet($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getProjet() === $this) {
+                $image->setProjet(null);
             }
         }
 

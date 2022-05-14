@@ -22,6 +22,9 @@ class Commentaire
     #[ORM\ManyToOne(targetEntity: projet::class, inversedBy: 'commentaires')]
     private $projet;
 
+    #[ORM\ManyToOne(targetEntity: utilisateur::class, inversedBy: 'commentaires')]
+    private $utilisateur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Commentaire
     public function setProjet(?projet $projet): self
     {
         $this->projet = $projet;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?utilisateur
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?utilisateur $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
 
         return $this;
     }

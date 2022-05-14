@@ -19,6 +19,9 @@ class Image
     #[ORM\Column(type: 'string', length: 255)]
     private $chemin_image;
 
+    #[ORM\ManyToOne(targetEntity: projet::class, inversedBy: 'images')]
+    private $projet;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Image
     public function setCheminImage(string $chemin_image): self
     {
         $this->chemin_image = $chemin_image;
+
+        return $this;
+    }
+
+    public function getProjet(): ?projet
+    {
+        return $this->projet;
+    }
+
+    public function setProjet(?projet $projet): self
+    {
+        $this->projet = $projet;
 
         return $this;
     }
