@@ -19,6 +19,9 @@ class Commentaire
     #[ORM\Column(type: 'date')]
     private $date_commentaire;
 
+    #[ORM\ManyToOne(targetEntity: projet::class, inversedBy: 'commentaires')]
+    private $projet;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Commentaire
     public function setDateCommentaire(\DateTimeInterface $date_commentaire): self
     {
         $this->date_commentaire = $date_commentaire;
+
+        return $this;
+    }
+
+    public function getProjet(): ?projet
+    {
+        return $this->projet;
+    }
+
+    public function setProjet(?projet $projet): self
+    {
+        $this->projet = $projet;
 
         return $this;
     }
