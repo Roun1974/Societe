@@ -51,12 +51,14 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'datetime_immutable',options:['default'=>'CURRENT_TIMESTAMP'])]
     private $created_at;
+   
 
-    #[ORM\OneToMany(mappedBy: 'utilisateur', targetEntity: Commentaire::class)]
+    #[ORM\OneToMany(mappedBy: 'Utilisateur', targetEntity: Commentaire::class)]
     private $commentaires;
 
     public function __construct()
     {
+        $this->created_at = new \DateTimeImmutable();
         $this->commentaires = new ArrayCollection();
     }
 

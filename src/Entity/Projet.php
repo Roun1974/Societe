@@ -24,10 +24,10 @@ class Projet
     #[ORM\ManyToOne(targetEntity: etat::class, inversedBy: 'projets')]
     private $etat;
 
-    #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Commentaire::class)]
+    #[ORM\OneToMany(mappedBy: 'Projet', targetEntity: Commentaire::class)]
     private $commentaires;
 
-    #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Image::class)]
+    #[ORM\OneToMany(mappedBy: 'Projet', targetEntity: Image::class)]
     private $images;
 
     public function __construct()
@@ -115,7 +115,7 @@ class Projet
         return $this->images;
     }
 
-    public function addImage(Image $image): self
+    public function addImage($image): self
     {
         if (!$this->images->contains($image)) {
             $this->images[] = $image;
@@ -125,7 +125,7 @@ class Projet
         return $this;
     }
 
-    public function removeImage(Image $image): self
+    public function removeImage($image): self
     {
         if ($this->images->removeElement($image)) {
             // set the owning side to null (unless already changed)
