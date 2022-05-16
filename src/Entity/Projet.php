@@ -24,10 +24,10 @@ class projet
     #[ORM\ManyToOne(targetEntity: etat::class, inversedBy: 'projets')]
     private $etat;
 
-    #[ORM\OneToMany(mappedBy: 'Projet', targetEntity: Commentaire::class)]
+    #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Commentaire::class)]
     private $commentaires;
 
-    #[ORM\OneToMany(mappedBy: 'Projet', targetEntity: Image::class)]
+    #[ORM\OneToMany(mappedBy: 'projet', targetEntity: Image::class)]
     private $images;
 
     public function __construct()

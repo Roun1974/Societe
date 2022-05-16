@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EtatRepository::class)]
-class Etat
+class etat
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -59,7 +59,7 @@ class Etat
     {
         if (!$this->etats->contains($etat)) {
             $this->etats[] = $etat;
-            $etat->setProjet($this);
+            $etat->setprojet($this);
         }
 
         return $this;
