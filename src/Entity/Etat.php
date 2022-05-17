@@ -59,7 +59,7 @@ class etat
     {
         if (!$this->etats->contains($etat)) {
             $this->etats[] = $etat;
-            $etat->setprojet($this);
+            $etat->setProjet($this);
         }
 
         return $this;
