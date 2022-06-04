@@ -3,9 +3,11 @@
 {% block title %}New Annonces{% endblock %}
 
 {% block body %}
-    <h1>Create new Annonces</h1>
+<div class="container">
+    <h6>Creer une nouvelles Annonces</h6>
 
     {{ include('annonces/_form.html.twig') }}
 
-    <a href="{{ path('app_annonces_index') }}">back to list</a>
+    <a href="{{ path('app_annonces_index') }}">retour à la liste</a>
+    </div>
 {% endblock %}

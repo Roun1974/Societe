@@ -3,7 +3,8 @@
 {% block title %}Annonces index{% endblock %}
 
 {% block body %}
-    <h1>Annonces index</h1>
+<div class="container">
+    <h6>Listes des Annonces</h6>
 
     <table class="table">
         <thead>
@@ -34,4 +35,5 @@
     </table>
 
     <a href="{{ path('app_annonces_new') }}">Create new</a>
+    </div>
 {% endblock %}
