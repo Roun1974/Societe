@@ -1,11 +1,14 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Avenir - Solidarité - Développement{% endblock %}
-
 {% block body %}
-{% include('inc/slides.html.twig') %}
-  <section id="content">
+    {% include('inc/slides.html.twig') %}<br/>
+    <section id="content">
       <div class="container">
+       {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
         <div class="row">
           <div class="span12">
             <div class="row">
@@ -15,11 +18,10 @@
                     <i class="icon-briefcase icon-circled icon-64 active"></i>
                   </div>
                   <div class="text">
-                    <h6>Qui sommes nous ?</h6>
-                    <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    <h6>Qui sommes <strong>nous ?</strong></h6>
+                  <strong> Avenir - Solidarité et Développement </strong> est une association intervenant dans le domaine de l’agriculture, la pisciculture et la prestation de services pour la production de biogaz en milieu rural au Sénégal. 
                     </p>
-                    <a href="#">Learn more</a>
+                    <a href="#">En savoir plus ...</a>
                   </div>
                 </div>
               </div>
@@ -30,10 +32,8 @@
                   </div>
                   <div class="text">
                     <h6>Notre objectif</h6>
-                    <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                    </p>
-                    <a href="#">Learn more</a>
+                    <p><strong>Notre </strong>principal objectif est le développement durable qui constitue un mode de développement équilibré des activités humaines en faisant coïncider efficacité économique, préservation de l’environnement et équité sociale.</p>
+                    <a href="#">En savoir plus ...</a>
                   </div>
                 </div>
               </div>
@@ -45,9 +45,9 @@
                   <div class="text">
                     <h6>Notre vision</h6>
                     <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                     <strong>Notre </strong>vision est de mettre en évidence une stratégie de développement durable, en mettant sur place des petites actions faisables consistant à la mise en œuvre d’activités économiques simples ne nécessitant pas de grands moyens.
                     </p>
-                    <a href="#">Learn more</a>
+                    <a href="#">En savoir plus ...</a>
                   </div>
                 </div>
               </div>
@@ -59,9 +59,8 @@
                   <div class="text">
                     <h6>Notre mission</h6>
                     <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                    </p>
-                    <a href="#">Learn more</a>
+<strong>Notre </strong> mission est de participer à l’effort national de développement et de croissance soutenue par le Plan Sénégal Emergent. Elle s’inscrit dans une dynamique participative de développement économique .                    </p>
+                    <a href="#">En savoir plus ...</a>
                   </div>
                 </div>
               </div>
@@ -75,100 +74,167 @@
             </div>
           </div>
         </div>
-        <!-- end divider -->
-        <!-- Portfolio Projects -->
+        <!-- Descriptions -->
+  <h4 class="heading"> <strong> Domaine</strong> d'intervention</h4>
+        <p>L’association « <strong>Avenir – Solidarité et développement</strong> » a pour principal objectif le développement durable qui constitue un mode de développement équilibré des activités humaines en faisant coïncider efficacité économique, préservation de l’environnement et équité sociale. Elle intervient dans le domaine économique en tenant compte des secteurs connexes. Les activités mises en place permettront aux communautés de générer des ressources suffisantes de 
+manière autonomes et durables. Pour cela, toutes les activités principales seront regroupés dans une 
+ferme intégrée. Le principal avantage est de combiner ces activités pour les rendre interdépendantes. Cela permet à la communauté de produire et de reproduire des 
+ressources alimentaires sur plusieurs cycles en ne faisant appel qu’à très peu de moyens extérieurs .
+        </p>
+        <!-- Lists -->
+        <div class="row">
+          <!-- Unordered Lists -->
+          <div class="span3">
+            <h4>Le maraichage</h4>
+             <img src="assets/img/works/full/image-03-full.jpg" alt="" />
+             <p> Le choix doit tenir compte de la rotation culturale. Celle-ci est une pratique qui consiste à ne pas 
+cultiver des espèces appartenant à la même famille successivement sur la même parcelle. La rotation évite la propagation des maladies et ennemis qui risquent d’envahir une culture si elle est répétée sur une même parcelle. Enfin, la rotation permet à certaines plantes de profiter de l’azote fixé 
+par d’autres plantes (légumineuses).</br> Au-delà des critères agronomiques, l’aspect économique est 
+tout aussi important. Les espèces cultivées doivent être productives et être vendues à un bon prix. Il 
+va de soi que l’époque de vente est déterminante. Les spéculations retenues sont : la tomate, le gombo, le jaxatu et la pomme de terre. 
+Annuellement, chaque site fera l’objet de deux cultures maraîchères : une première spéculation de 
+type européen pendant la saison froide (novembre à février) et une deuxième de type africain de 
+mars à mai...</p>
+          </div>
+          <!-- Unstyled Lists -->
+          <div class="span3">
+            <h4>La pisciculture</h4>
+             <img src="assets/img/works/full/image-10-full.jpg" alt="" />
+              <p>Le secteur de la pisciculture qui a fait l'objet ces quelques dernières années d'une littérature abondante où l'on retrouve les mots clés de <strong>développement durable, de durabilité ou de gestion durable</strong>, était une activité certes très ancienne, qui de nos jours, connaît un essor considérable dans le monde.</br></br> L'augmentation de la population du globe, la demande croissante en protéines et en particulier en protéines d'origine aquatique, alors que les débarquements de la pêche plafonnent, créent une situation nouvelle. </br>
+Ainsi, la création de cette ferme piscicole va constituer un ajout dans le secteur de la distribution et de la vente du poisson afin que les ménages aient un accès beaucoup facile aux ressources halieutiques. 
+Cela contribuera également à lutter contre les différentes pénuries de ravitaillement constatées ces dernières années sur le marché local...
+<p/>
+          </div>
+          <!-- Ordered Lists -->
+          <div class="span3">
+            <h4>La riziculture</h4>
+             <img src="assets/img/works/full/image-12-full.jpg" alt="" />
+              <p>Le riz est d’une importance vitale pour le Sénégal. C’est la denrée de base dans le pays, comme dans toute l’Afrique occidentale ;<br/> Pourtant, la culture en est limitée alors que la consommation explose.<br/>
+              La population augmente rapidement et chaque habitant consomme en moyenne 100 kg de riz par an.<br/><br/>
+              Le Sénégal importe jusqu’à 80 % de ses besoins en riz.<br/>
+              La production du riz dans vallée du fleuve Sénégal occupe une place de choix pour la réussite du 
+programme sénégalais d’autosuffisance en riz.<br/>
+La culture rizicole dans cette zone nord du pays 
+devrait couvrir 57 % des besoins nécessaires à l’atteinte de l’autosuffisance.<br/><br/> C'est l’activité la plus dependante des conditions climatiques mais qui, si elle est reussie, fournit la plus grande nourriture 
+aux populations...</p>
+          </div>
+          <!-- Unstyled Lists -->
+          <div class="span3">
+            <h4>L' aviculture</h4>
+             <img src="assets/img/works/full/image-02-full.jpg" alt="" />
+              <p>La volaille représente aujourd’hui l’une des principales sources de protéines animales ; de ce faite l’aviculture connaît un développement exponentiel et est un créneau de choix pour les producteurs agricoles, des ex-fonctionnaires, les investisseurs privés…
+L’aviculture semi -industrielle localisée essentiellement dans la région de Dakar bénéficie d’un micro- climat favorable. 
+L’offre en œufs de consommation est insuffisante en production locale pour une demande sans cesse croissante car l’œuf rentre dans la préparation de plats cuisinés et de nombreuses pâtisseries. 
+Le climat joue sur la production locale ainsi pendant l’hivernage, le taux de ponte baisse à cause de la chaleur.
+En 1996 la consommation par habitant était de 20 œufs / an, cependant depuis l’année 2000 l’objectif du gouvernement s’établit à 220 œufs / habitant / an.
+Cette situation laisse apparaître une large potentialité de production...
+</p>
+          </div>
+        </div>
+        <!-- divider -->
         <div class="row">
           <div class="span12">
-            <h4 class="heading">Quelques projets <strong> humanitaires  </strong>réalisés:</h4>
+            <div class="solidline">
+            </div>
+          </div>
+       </div>
+        <div class="row">
+          <div class="span12">
+            <h4 class="heading">Nos projets pour un <strong> développement durable</strong></h4>
             <div class="row">
               <section id="projects">
                 <ul id="thumbs" class="portfolio">
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 design" data-id="id-0" data-type="web">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The City" href="assets/img/works/full/image-01-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Agriculture" href="img/works/full/image-01-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-01.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-01.jpg" alt="une agriculture innovante et durable par la création d’une ferme intégrée regroupant plusieurs activités interdépendantes.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 design" data-id="id-1" data-type="icon">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Office" href="assets/img/works/full/image-02-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Aviculture" href="img/works/full/image-02-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-02.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-02.jpg" alt="La volaille représente aujourd’hui l’une des principales sources de protéines animales ; de ce faite l’aviculture connaît un développement exponentiel et est un créneau de choix pour les producteurs agricoles, des ex-fonctionnaires, les investisseurs privés…
+L’aviculture semi -industrielle localisée essentiellement dans la région de Dakar bénéficie d’un micro- climat favorable.
+.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 photography" data-id="id-2" data-type="illustrator">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="assets/img/works/full/image-03-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Promotion du maraichage" href="img/works/full/image-03-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-03.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-03.jpg" alt="La promotion de l’agroécologie dans un contexte de changement climatique constitue une innovation première de l’ association  dans la vallée du fleuve Sénégal. L’agroécologie apparaît de plus en plus comme une réponse pertinente á la problématique d’adaptation agricole des régions sèches. Que ce soit en matière de gestion de l’eau, de préservation du sol contre l’érosion et de la gestion de la fertilité des sols.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 photography" data-id="id-2" data-type="illustrator">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="assets/img/works/full/image-04-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Production des oeufs" href="img/works/full/image-04-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-04.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-04.jpg" alt="L’offre en œufs de consommation est insuffisante en production locale pour une demande sans cesse croissante car l’œuf rentre dans la préparation de plats cuisinés et de nombreuses pâtisseries. 
+Le climat joue sur la production locale ainsi pendant l’hivernage, le taux de ponte baisse à cause de la chaleur.
+En 1996 la consommation par habitant était de 20 œufs / an, cependant depuis l’année 2000 l’objectif du gouvernement s’établit à 220 œufs / habitant / an.
+.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 photography" data-id="id-4" data-type="web">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Sea" href="assets/img/works/full/image-05-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Maraichage" href="img/works/full/image-05-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-05.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-05.jpg" alt="Au Sénégal, la vallée du fleuve est une zone semi-aride où les populations à dominante pastorale font face à plusieurs défis climatiques. Toutefois, les écosystèmes offrent de réelles opportunités de valorisation des pratiques agroécologiques capables de renforcer la dynamique des exploitations familiales et la production vivrière.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 photography" data-id="id-5" data-type="icon">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Clouds" href="assets/img/works/full/image-06-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Arboriculture" href="img/works/full/image-06-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-06.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-06.jpg" alt="L’offre en fruits est constituée d’espèces de zone tempérée (agrumes) et surtout de fruits dits tropicaux : mangue, banane, ananas, papaye, citron, etc. Les fruits sont essentiellement destinés au marché local, mais occupent de plus en plus la place dans les exportations avec un créneau de production très favorable pour la mangue (mai-juillet)...">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 photography" data-id="id-2" data-type="illustrator">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Mountains" href="assets/img/works/full/image-07-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Embauche ovine" href="img/works/full/image-07-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-07.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-07.jpg" alt="Les intérêts de l’embouche ovine sont multiples surtout dans le contexte de l’environnement actuel marqué de plus en plus par les effets néfastes des changements climatiques sur la production agricole.">
                   </li>
                   <!-- End Item Project -->
                   <!-- Item Project and Filter Name -->
                   <li class="item-thumbs span3 design" data-id="id-0" data-type="web">
                     <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="The Dark" href="assets/img/works/full/image-08-full.jpg">
+                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Elevage" href="img/works/full/image-08-full.jpg">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
                     <!-- Thumb Image and Description -->
-                    <img src="assets/img/works/thumbs/image-08.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                    <img src="assets/img/works/thumbs/image-08.jpg" alt="La croissance du cheptel, la dégradation des terres, le développement de l’agriculture, des aménagements hydroagricoles et de l’urbanisation accroissent les pressions sur les ressources naturelles (parcours, aliment bétail, eau) et foncières. Les régulations traditionnelles sont remises en cause et accentuent le risque de conflits...">
                   </li>
                   <!-- End Item Project -->
                 </ul>
@@ -176,5 +242,7 @@
             </div>
           </div>
         </div>
-    </section>
+        <!-- End Portfolio Projects -->
+        <!-- divider -->
+    </section> 
 {% endblock %}

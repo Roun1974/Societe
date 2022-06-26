@@ -4,6 +4,7 @@
 
 {% block body %}
 <div class="container">
+
     <h6>Listes des Annonces</h6>
 
     <table class="table">
@@ -22,8 +23,8 @@
                 <td>{{ annonce.title }}</td>
                 <td>{{ annonce.content }}</td>
                 <td>
-                    <a href="{{ path('app_annonces_show', {'id': annonce.id}) }}">show</a>
-                    <a href="{{ path('app_annonces_edit', {'id': annonce.id}) }}">edit</a>
+                    <a href="{{ path('app_annonces_show', {'id': annonce.id}) }}" class="btn btn-theme btn-rounded">show</a><br/><br/>
+                    <a href="{{ path('app_annonces_edit', {'id': annonce.id}) }}" class="btn btn-theme btn-rounded">Editer</a>
                 </td>
             </tr>
         {% else %}
@@ -34,6 +35,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_annonces_new') }}">Create new</a>
+    <a href="{{ path('app_annonces_new') }}" class="btn btn-theme btn-rounded" >Create new</a><br/><br/>
     </div>
 {% endblock %}
